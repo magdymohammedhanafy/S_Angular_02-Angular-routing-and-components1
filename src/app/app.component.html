@@ -1,0 +1,27 @@
+<router-outlet></router-outlet>
+
+<h1 class="req1">1-implement lazy loading module with children routes</h1>
+<div class="modules">
+  <button class="moduleButton" type="button" routerLink="/customer">
+    customers
+  </button>
+  <button class="moduleButton" type="button" routerLink="/orders">
+    orders
+  </button>
+  <button class="moduleButton" type="button" routerLink="">Home</button>
+</div>
+<hr />
+
+<h1>
+  2-implemnent parent and child components relationship with input and output
+  data flows
+</h1>
+
+<app-item-detail [item]="currentItem"></app-item-detail>
+<hr />
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+<h3>Parent component receiving value via @Output()</h3>
